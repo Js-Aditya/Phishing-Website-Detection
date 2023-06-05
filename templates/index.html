@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Website Detection</title>
+      <style>
+.content {
+        max-width: 500px;
+        margin: auto;
+      }
+      </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detection</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .input-bar {
+      width: 80%; /* Decrease the width of the input bar */
+      max-width: 700px;
+      margin: 0 auto; /* Align the input bar to the center */
+    }
+
+    .btn-green {
+      background-color: deepskyblue;   
+      color: white;
+      width: 80%;
+      max-width: 100px;
+      margin: 20px auto;
+    }
+
+    .blog-container {
+      margin-top: 50px;
+    }
+
+    .blog-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .blog-card {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Phishing Website Detection</h1>
+    <br>
+    <br>
+    <p>Paste the link here:</p>
+    <form method="post" action="/predict">
+    <input type="text" id="linkInput" name="link" class="form-control input-bar" placeholder="Enter link">
+    <br>
+    <button class="btn btn-green" value="Predict">Check</button>
+    </form>
+<br>
+    {% if result=='P' %}
+    <p style="color: red;font-size: 70px;">Phishing Website </p>
+    {% elif result=='S' %}
+    <p style="color: rgb(99, 237, 99);font-size: 70px;">Safe Website </p>
+    {% else%}
+    <p></p>
+    {% endif %}
+    <br>
+    <div class="blog-container">
+      <h2 class="blog-heading">Team Members</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="blog-card">
+            <h3>J.Karthikeya Reddy</h3>
+            <p>Roll No : 20B81A6216</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-card">
+            <h3>J.Sai Aditya</h3>
+            <p>Roll No : 20B81A6237</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog-card">
+            <h3>N.Tanish Reddy</h3>
+            <p>Roll No : 20B81A6252</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+    
+</body>
+
+</html>
